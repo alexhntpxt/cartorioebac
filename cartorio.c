@@ -1,7 +1,7 @@
 #include <stdio.h> // biblioteca de comunicação com o usuário
 #include<stdlib.h> //biblioteca de alocações de espaço em memória
 #include<locale.h> // biblioteca de alocações de texto por região
-
+#include<string.h>
 int registro() //função para registro de nomes
 {
    //início criação de váriaveis/string
@@ -141,6 +141,7 @@ int main ()
 	    printf("\t1 - Registrar Nomes\n");
 	    printf("\t2 - Consultar os nomes\n");
 	    printf("\t3 - Deletar nomes\n\n");
+	    printf("\t4 - Sair do sistema\n\n");
 	    printf("Opção:"); //fim do menu
 	
 	    scanf("%d", &opcao); //armazenando a escolha do usuário
@@ -161,6 +162,10 @@ int main ()
 			    deletar ();  
             break;
             
+            case 4:
+            	printf("Obrigado por utilizar o sistema!\n");
+            	return 0;
+            	break;
 			
 			default:
             	printf("Essa opção não está disponível\n");
